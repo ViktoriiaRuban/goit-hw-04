@@ -72,7 +72,7 @@ img {
 
 /* Header */
 
-.backround-header {
+.header {
   border-bottom: 1px solid #e7e9fc;
 }
 
@@ -101,10 +101,11 @@ img {
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   text-decoration: none;
   letter-spacing: 0.02em;
   padding: 24px 0;
+  display: block;
 }
 .address {
   margin-left: auto;
@@ -113,7 +114,6 @@ img {
 .header-contacts {
   display: flex;
   gap: 40px;
-  padding: 24px 0;
 }
 
 .navigation {
@@ -128,12 +128,12 @@ img {
 }
 .navigation:hover,
 .navigation:focus {
-  color: #4d5ae5;
+  color: var(--color-blue);
 }
 
 .address-link:hover,
 .address-link:focus {
-  color: #4d5ae5;
+  color: var(--color-blue);
 }
 
 ul {
@@ -235,6 +235,7 @@ ul {
   font-weight: 500;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+  color: var(--color-primary);
 }
 
 .paragraph {
@@ -251,15 +252,21 @@ ul {
   margin-bottom: 8px;
   display: flex;
   justify-content: center;
-  align-items: center;
   background: var(--color-inverted);
   border-radius: 4px;
+  align-items: center;
+}
+
+.size-svg {
+  width: 64px;
+  height: 64px;
+  display: flex;
 }
 
 /* information  */
 
 .information {
-  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .title {
   font-weight: 700;
@@ -268,6 +275,7 @@ ul {
   letter-spacing: 0.02em;
   text-align: center;
   margin-bottom: 72px;
+  color: var(--color-primary);
 }
 
 .img-container {
@@ -276,15 +284,6 @@ ul {
 }
 
 /* team  */
-.title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  margin-bottom: 72px;
-}
-
 .section-background-team {
   padding-bottom: 120px;
   background: var(--color-inverted);
@@ -313,7 +312,7 @@ ul {
 
 /* footer */
 
-.backround-footer {
+.footer {
   background: var(--color-primary);
   padding: 100px 0;
 }
@@ -334,14 +333,9 @@ ul {
   margin-top: 16px;
 }
 .footer {
-  padding-top: 100px;
-  padding-left: 156px;
-  padding-right: 1020px;
-  padding-bottom: 100px;
   margin-bottom: 0;
   padding: 100px;
   background-color: var(--color-primary);
-  display: block;
 }
 
 .text-footer {
@@ -356,40 +350,32 @@ ul {
 
 .footer-container {
   display: flex;
-  gap: 100px;
+  align-items: baseline;
 }
 
 .footer-heading {
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-inverted);
-  align-items: center;
 }
 
 .icons-footer {
   display: flex;
   gap: 16px;
-  align-items: center;
-  justify-content: center;
 }
 
-.items-footer {
-  border-radius: 50%;
-  display: flex;
-  background: rgba(255, 255, 255, 0.1);
+.footer-social {
+  margin-left: 120px;
 }
-
 .icons-link {
-  display: inline-flex;
   justify-content: center;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   align-items: center;
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .icons-link:hover,
@@ -401,7 +387,6 @@ ul {
   width: 24px;
   height: 24px;
   fill: var(--color-inverted);
-  display: block;
 }
 
 /* portfolio*/
@@ -466,13 +451,10 @@ ul {
 }
 
 .team-card {
-  background: var(--color-light);
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 16px;
   padding-right: 16px;
-  border: 1px solid #e7e9fc;
-  border-top: none;
 }
 
 .cards-title {
@@ -491,13 +473,16 @@ ul {
   margin: 0;
 }
 
+.padding-card {
+  padding: 32px 0 32px 16px;
+  border: 1px solid #e7e9fc;
+}
 /* icons*/
 .icons {
   display: inline-flex;
   gap: 24px;
   margin-top: 8px;
 }
-
 .icons-app {
   width: 40px;
   height: 40px;
@@ -524,48 +509,42 @@ ul {
   fill: var(--color-inverted);
 }
 
-/* without it my twitter icon is too big */
-.img-icons-1 {
-  width: 24px;
-  height: 24px;
-  display: block;
-  fill: var(--color-inverted);
-  margin-top: 8px;
-}
-
 .icons-company {
   display: inline-flex;
   gap: 24px;
 }
 
-/* company */
+/* customers */
 
-.heading-two {
-  font-weight: 700;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  margin-bottom: 72px;
-  margin-top: 120px;
+.customers {
+  padding: 120px 0;
 }
+
 .company {
   display: flex;
-  fill: var(#8e8f99);
   border: 1px solid #8e8f99;
   border-radius: 4px;
   width: 168px;
   height: 88px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 72px;
 }
 
 .border-company {
   width: 104px;
   height: 56px;
 }
+
 .company:hover,
 .company:focus {
   border-color: var(--color-blue);
-  fill: var(--color-blue);
+}
+
+.border-company:hover,
+.border-company:focus {
+  color: var(--color-blue);
+}
+.icons-company {
+  display: flex;
+  gap: 24px;
 }
